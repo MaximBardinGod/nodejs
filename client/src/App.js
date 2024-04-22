@@ -10,9 +10,7 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <Switch>
           <Route path="/specification" component={Specification} />
-        </Switch>
       </div>
     </Router>
   );

@@ -1,7 +1,7 @@
 const express = require('express');
 const sql = require('msnodesqlv8');
 
-const connectionString = "server=DESKTOP-DA7Q1OV;Database=KIS;trusted_connection=yes;driver={SQL Server Native Client 11.0}";
+const connectionString = "server=KOMPUTER\\SQLEXPRESS;Database=KIS;trusted_connection=yes;driver={SQL Server Native Client 11.0}";
 
 function connectToDatabase() {
     return new Promise((resolve, reject) => {

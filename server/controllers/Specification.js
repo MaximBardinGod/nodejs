@@ -5,7 +5,7 @@ exports.getSpecifications = async (req, res) => {
     let conn;
     try {
         conn = await connectToDatabase();
-        const query = 'SELECT Id, ParentId, Description, QuantityPerParent, Measure FROM Specification';
+        const query = 'SELECT * FROM Specification';
         conn.query(query, (err, results) => {
             if (err) {
                 console.error('Error executing query:', err);
@@ -18,7 +18,7 @@ exports.getSpecifications = async (req, res) => {
         res.status(500).send('Database connection error');
     } finally {
         if (conn) {
-            conn.close(); // Закрываем соединение в блоке finally
+            conn.close();
         }
     }
 };
